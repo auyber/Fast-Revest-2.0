@@ -1,0 +1,723 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+:root {
+    /* COLORS */
+    --dark: #211C1C;
+    --secondary: #7A4A12;
+    --ligth: #D9D9D9;
+    --primary: #B57625;
+    
+    /* FONTS */
+    --fonttitles: 'Times New Roman', Times, serif;
+    --fontothers: Arial, sans-serif;
+
+    /* FONTSIZE */
+    --48px: 3rem;
+    --36px: 2.25rem;
+    --24px: 1.5rem;
+    --16px: 1rem;
+    --8px: 0.5rem;
+
+}
+
+/* Estilo geral da página */
+body {
+    background: var(--dark);
+    color: var(--ligth);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+/* MENU DE NAVEGAÇÃO */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;   
+    margin: 0 auto;
+}
+
+.logo img {
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+}
+
+nav {
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    margin-left: auto; 
+}
+
+nav a {
+    padding: 4px 6px;
+    text-decoration: none;
+    color: var(--ligth);
+}
+
+a:hover {
+    background-color: var(--secondary);
+}
+
+.hero {
+    margin: 16px 8px;
+}
+
+.content h1 {
+    color: var(--primary);
+    font-size: 32px;
+    margin: 0px;
+    margin-bottom: 8px;
+}
+
+.content p {
+    margin: 0px 21px;
+    font-size: 18px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.buttons button {
+    font-size: var(--16px);
+    margin-top: 0px;
+    margin: 0.2rem;
+    border-radius: 30px;
+    border: 1px solid white;
+}
+
+.buttons button:nth-child(2) {
+    border: 1px solid var(--primary);
+}
+
+.primary {
+    background-color: var(--secondary);
+    color: var(--ligth);
+}
+
+.secondary {
+    background-color: var(--ligth);
+    color: var(--secondary);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    margin: auto;
+}
+
+/* Seção de conteúdo */
+.content {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Botões */
+.buttons {
+    margin-top: 20px;
+}
+
+.primary, .secondary {
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+
+/* Nova seção de imagens */
+.image-section {
+    gap: 05px;
+    max-width: 500px;
+    width: calc(100% - 16px);
+    margin: 41px auto;
+}
+
+p {
+    font-size: var(--16px);
+}
+
+.image-section p {
+    margin-bottom: 48px;
+    color: var(--primary);
+}
+
+.image-box {
+    width: 100%; /* Ocupará toda a largura do container */
+    max-width: 1200px; /* Define um tamanho máximo */
+    height: 250px; /* Ajuste a altura conforme necessário */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+}
+
+.image-box img {
+    width: 90%; /* Ajuste o tamanho da imagem */
+    height: 90%; /* Ajuste o tamanho da imagem */
+    object-fit: cover;
+    border-radius: 05px;
+}
+
+/* Estilo inicial das imagens */
+.scroll-image {
+    opacity: 0; /* Inicia invisível */
+    transform: translateY(-100%); /* Começa no topo da página */
+    transition: opacity 1s ease, transform 1s ease; /* Transição suave */
+}
+
+/* Quando a classe 'visible' for adicionada */
+.scroll-image.visible {
+    opacity: 1; /* Torna a imagem visível */
+    transform: translateY(0); /* Move a imagem para a posição correta */
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* POR QUE ESCOLHER */
+
+.porque {
+    background-color: var(--secondary);
+    padding: 34px 8px;
+    text-align: left;
+}
+
+h2 {
+    font-size: var(--24px);
+}
+
+article {
+    background-color: var(--ligth);
+    color: var(--dark);
+    margin: 1rem auto;
+    border-radius: 5px;
+}
+
+article h3 {
+    font-size: 18px;
+    padding: 1rem 1rem 0 1rem;
+    margin: 8px 0;
+    color: var(--primary);
+}
+
+article p {
+   padding: 0 1rem 1rem 1rem;
+   margin: 0;
+}
+
+.galeria-tittle {
+    text-align: left;
+    margin: 36px 8px 16px 8px;
+}
+
+.carousel-container {
+    max-width: 1200px;
+    width: calc(100% - 16px);
+    height: 80vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 36px;
+    position: relative;
+    border-radius: 20px; /* Bordas arredondadas no contêiner */
+}
+
+.carousel {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px; /* Mantém o efeito arredondado */
+}
+
+.carousel-slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; 
+    height: 100%;
+}
+
+.carousel-slides .slide {
+    position: relative;
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+.carousel-slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: auto;
+}
+
+
+.carousel-slides .caption {
+    border: 1px solid white;
+    position: absolute;
+    bottom: 01%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #7a4912c5;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 15px;
+    z-index: 3; /* Garante que o link da legenda ficará acima dos outros elementos */
+    text-align: center;
+}
+
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+/* SOBRE NÓS */
+
+#sobrenos {
+    background-color: white;
+    color: var(--dark);
+    text-align: left;
+    padding: 36px 8px 30px 8px;
+    font-size: var(--16px);
+}
+
+#sobrenos h2 {
+    color: var(--secondary);
+}
+
+#sobrenos p {
+    margin-bottom: 30px;
+}
+
+.sobre-img {
+    display: none;
+}
+
+.texto-desktop {
+    display: none;
+}
+
+.sobre {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 10px; /* Espaço entre o GIF e o botão */
+    height: 100%; /* Garante que ocupe a altura total do contêiner */
+}
+
+.sobre button {
+    background-color: var(--primary);
+    color: var(--ligth);
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 4px 8px;
+}
+
+.gif img {
+    width: 50px;
+    height: 50px;
+}
+
+/* CONTATO */
+
+#contato {
+    padding: 36px 8px;
+    text-align: left;
+}
+
+#contato h2 {
+    color: var(--primary);
+}
+
+.wrapper .button {
+    display: block;
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin: 0 5px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 05px 10px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon {
+    color: #fff;
+}
+
+.wrapper a.whats:hover .icon {
+    background: #05a354;
+}
+
+.wrapper > a.insta:hover .icon {
+    background-image: linear-gradient(45deg, #5652C4, #ff0000);
+}
+
+.wrapper > a.face:hover .icon {
+    background: #4267b2;
+}
+
+.wrapper .button .icon {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    line-height: 60px;
+    text-align: center;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button .icon i {
+    color: var(--dark);
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;    
+}
+
+.wrapper .button:hover {
+    width: 200px;
+}
+
+.wrapper a.whats:hover span {
+    color: #05a354;
+}
+
+.wrapper a.insta:hover span {
+    color: #ff0000;
+}
+
+.wrapper a.face:hover span {
+    color: #4267b2;
+}
+
+.wrapper > a {
+    color: var(--dark);
+}
+
+.wrapper {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--secondary);
+    color: var(--ligth);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100px;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--ligth);
+}
+
+.icon {
+    font-size: 8px;
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) { 
+    header {
+        height: 100px;   
+    }
+    
+    .logo img {
+        width: 80px;
+        height: 80px;
+        margin: 30px;
+    }
+    
+    nav {
+        display: flex;
+        gap: 0.2rem;
+        align-items: center;
+        margin-left: auto; 
+    }
+    
+    nav a {
+        padding: 5px 8px;
+        text-decoration: none;
+        color: var(--ligth);
+        margin: 0 10px;
+    }
+
+    /* HERO */
+
+    .hero {
+        margin: 48px 16px;
+    }
+    
+    .content h1 {
+        font-size: var(--36px);
+        margin: 0px;
+        margin-bottom: 22px;
+    }
+    
+    .content p {
+        margin: 0px 72px;
+        font-size: var(--24px)
+    }
+
+    .buttons button {
+        font-size: var(--16px);
+        margin-top: 0px;
+        margin: 0.2rem;
+        border-radius: 30px;
+        border: 1px solid white;
+    }
+
+    /* POR QUE ESCOLHER */
+    .porque {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 0 17px;
+    }
+
+    .porque h2 {
+        width: 100%;
+        margin-top: 34px;
+    }
+
+    article {
+        background-color: var(--ligth);
+        color: var(--dark);
+        border-radius: 5px;
+        flex: 1 1 calc(50% - 10px);
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    .last {
+        margin-bottom: 48px;
+    }
+
+    article h3 {
+        font-size: 18px;
+        padding: 1rem;
+        margin: 0;
+        color: var(--primary);
+    }
+
+    article p {
+        padding: 0 1rem 1rem 1rem;
+        margin: 0;
+    }
+
+    .porque article:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    /* GALERIA */
+    #galeria-title {
+        text-align: left;
+        margin: 48px 16px;
+    }
+    
+    .carousel-container {
+        margin-bottom: 56px;
+    }
+
+    /* SOBRE NÓS */
+
+    #sobrenos {
+        padding: 48px 16px;
+        background-color: white;
+        color: var(--dark);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+
+    /* Ajusta a imagem à esquerda */
+    #sobrenos > div:first-child {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+    }
+
+    .sobre-img {
+        width: auto;
+        max-width: 100%;
+        height: 50vh;
+        border-radius: 8px;
+        display: block;
+        border: 3px solid var(--primary);
+    }
+
+    /* Ajusta o texto à direita */
+    #sobrenos > div:nth-child(2) {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        margin-right: 16px;
+    }
+
+    /* Garante que o botão e o GIF fiquem centralizados abaixo */
+    .sobre {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sobre button {
+        font-size: 18px;
+        padding: 5px 8px;
+    }
+
+    .texto-desktop {
+        display: none;
+    }
+
+    .texto-mobile {
+        display: none;
+    }
+    .texto-desktop {
+        display: block;
+    }
+
+    /* CONTATO */
+    #contato {
+        padding: 48px 16px;
+    }
+
+    #contato h2 {
+        margin-bottom: 36px;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+    header {
+        max-width: 1200px;
+    }
+
+    nav a {
+        font-size: 18px;
+    }
+
+    .content {
+        max-width: 1200px;
+        width: 100%;
+    }
+
+    .content h1 {
+        font-size: var(--48px);
+    }
+
+    .content p {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .last {
+        font-size: 24px;
+    }
+
+    .buttons {
+        margin-top: 20px;
+    }
+
+    .primary, .secondary {
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .primary { background: white; color: black; }
+    .secondary { 
+        background: black; 
+        color: white;
+        border: 1px solid white;
+    }
+
+    .carousel-container {
+        max-width: 1200px;
+        width: 95%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+        padding: 20px;
+        margin: 0 auto;
+        margin-bottom: 48px;
+    }
+    
+}

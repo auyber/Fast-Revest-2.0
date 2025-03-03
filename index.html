@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framer Layout</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <header>
+        <span class="logo">
+            <a href="index.html"><img src="images/logo.png" alt="logo da fast revest revestimentos" srcset=""></a>
+        </span>
+        <nav>
+            <a href="index.html">início</a>
+            <a href="#galeria-title">galeria</a>
+            <a href="#sobrenos">sobre</a>
+            <a href="#contato">contato</a>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="content">
+                    <h1>Seu volante novo,
+                        onde você estiver!</h1>
+                    <p>Seu automóvel merece o melhor em proteção e estilo, e é por isso que estamos aqui!
+                    <br>
+                    <strong>Atendemos em Balneário Camboriú e região.</strong>
+                    </p>
+                    <div class="buttons">
+                        <a href="https://wa.me/5515998428319" target="_blank"><button class="primary">Agenda agora mesmo!</button></a>
+                        <a href="#galeria-title"><button class="secondary">Confira nossa Galeria</button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="image-section">
+            <div>
+                <div class="image-box">
+                    <img src="images/1.jpeg" alt="Image 1" class="scroll-image">
+                </div>
+                <p>Costura de Alta Qualidade</p>
+            </div>
+            <div>
+                <div class="image-box">
+                    <img src="images/2.jpeg" alt="Image 2" class="scroll-image">
+                </div>
+                <p>Proteção e Estilo</p>
+            </div>
+            <div id="total-large">
+                <div class="image-box">
+                    <img src="images/3.jpeg" alt="Image 3" class="scroll-image">
+                </div>
+                <p>Sustentabilidade Garantida</p>
+            </div>
+        </section>
+        <section class="porque">
+            <h2>Por que escolher a Fast Revest?</h2>
+            <article>
+                <h3>Conveniência</h3>
+                <p>Diga adeus às idas à loja! Nosso serviço móvel leva a personalização do seu volante até você, garantindo praticidade e economia de tempo.</p>
+            </article>
+            <article>
+                <h3>Qualidade Garantida</h3>
+                <p>Trabalhamos apenas com materiais premium e técnicas avançadas de instalação, assegurando um acabamento impecável e a durabilidade que seu veículo merece.</p>
+            </article>
+            <article>
+                <h3>Atendimento Personalizado</h3>
+                <p>Cada cliente é único! Auxiliamos na escolha da melhor capa para seu carro, com um atendimento sob medida para atender suas preferências e necessidades.</p>
+            </article>
+            <article>
+                <h3>Compromisso com o Meio Ambiente</h3>
+                <p>Nossas capas ecológicas são feitas com materiais sustentáveis, garantindo proteção e estilo sem agredir o meio ambiente. Escolha consciente, sem abrir mão da qualidade!</p>
+            </article>
+            <article class="last">
+                <h3>Estilo e Segurança</h3>
+                <p>Além de proteger, nossas capas adicionam um toque sofisticado ao interior do seu carro. Com costura precisa e ajuste perfeito, proporcionamos mais conforto e aderência ao dirigir.</p>
+            </article>
+        </section>
+        
+        <h2 id="galeria-title">Galeria</h2>
+        <section id="galeria" class="carousel-container">
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-slides">
+                        <div class="slide">
+                            <a href="https://wa.me/5515998428319" target="_blank"><img src="images/1.jpeg" alt="#" class="inicio">
+                            <div class="caption">Agende agora mesmo</div>
+                            </a>
+                         </a>    
+                        </div>
+                        <div class="slide">
+                            <a href="https://wa.me/5515998428319" target="_blank"><img src="images/2.jpeg" alt="#" class="inicio">
+                            <div class="caption">Agende agora mesmo</div>
+                            </a>
+                         </a>    
+                        </div>
+                        <div class="slide">
+                            <a href="https://wa.me/5515998428319" target="_blank"><img src="images/3.jpeg" alt="#" class="inicio">
+                            <div class="caption">Agende agora mesmo</div>
+                            </a>
+                         </a>    
+                        </div>
+                        <div class="slide">
+                            <a href="https://wa.me/5515998428319" target="_blank"><img src="images/logo.png" alt="#" class="inicio">
+                            <div class="caption">Agende agora mesmo</div>
+                            </a>
+                         </a>    
+                        </div>
+                    </div>
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>    
+        </section>
+        <section id="sobrenos">
+            <div>
+                <img class="sobre-img" src="images/1.jpeg" alt="#">
+            </div>
+            <div>
+                <h2>Sobre Nós</h2>
+                
+                <!-- Texto padrão para mobile -->
+                <p class="texto-mobile">
+                    A Fast Revest oferece instalação de capas automotivas personalizadas com praticidade e qualidade, atendendo você onde estiver em Balneário Camboriú e região. Nosso atendimento móvel elimina a necessidade de deslocamento, levando até você capas sob medida, feitas com materiais ecológicos e costura personalizada, garantindo conforto, proteção e um acabamento impecável. Com qualidade garantida e serviço personalizado, cuidamos do seu carro com atenção aos mínimos detalhes.
+                </p>
+                <!-- Texto expandido para telas maiores -->
+                <p class="texto-desktop">
+                    A Fast Revest nasceu para unir proteção, estilo e conveniência para o seu automóvel. Somos especialistas em capas automotivas personalizadas, oferecendo um serviço exclusivo em Balneário Camboriú e região.
+                    Nosso diferencial é o atendimento móvel, levando a instalação até você, seja em casa, no trabalho ou onde preferir, eliminando a necessidade de deslocamento e tornando tudo mais prático.
+                    Utilizamos materiais ecológicos de alta qualidade e costura personalizada, garantindo conforto, durabilidade e um acabamento impecável para seu veículo.
+                    Na Fast Revest, cada detalhe importa. Nosso compromisso é oferecer qualidade garantida, atendimento personalizado e um serviço ágil para que seu carro tenha sempre o melhor em proteção e design.
+                </p>
+            </div>
+        
+            <div class="sobre">
+                <span class="gif"><img src="images/volante.gif" alt=""></span>
+                <a href="https://wa.me/5515998428319" target="_blank"><button>Agende agora e transforme o interior do seu veículo!</button></a>
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Entre em Contato</h2>
+            <p>Quer renovar seu volante?</p>
+            <p>Envie-nos uma mensagem pelo WhatsApp para um orçamento personalizado!</p>
+            <div class="wrapper">
+                <a class="whats" href="https://wa.me/5515998428319" target="_blank">
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <span>WhatsApp</span>
+                    </div>
+                </a>
+            </div>
+            <p>E não se esqueça de nos seguir no Istagram e Facebook para inspirações e novidades!</p>
+            <div class="wrapper">
+                <a class="insta" href="https://www.instagram.com/revestfast?igsh=cWJkMHRldWd2NGE0" target="_blank">
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <span>Instagram</span>
+                    </div>
+                </a>
+                <a class="face" href="https://www.facebook.com/people/Fast-Revest/100063635225624/" target="_blank">
+                    <div class="button">
+                        <div class="icon">
+                            <i class="fab fa-facebook-f"></i>
+                        </div>
+                        <span>Facebook</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© Todos os direitos reservados. Fast Revest Revestimentos 2024. | Criação de Sites by <a href="https://www.linkedin.com/in/auyber-genesini-moura-58b258144/" target="_blank">Auyber Genesini Moura</a>.</p>
+        <a class="icon" href="https://www.flaticon.com/br/icones-animados-gratis/volante" title="volante ícones animados">Volante ícones animados criados por Freepik - Flaticon</a>
+    </footer>
+    
+</body>
+</html>
