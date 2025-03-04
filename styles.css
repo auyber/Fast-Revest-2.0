@@ -39,10 +39,17 @@ body {
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 80px;   
+    height: 100px;   
     margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .logo a:hover {
@@ -629,7 +636,10 @@ footer a:hover::before {
 
 @media screen and (min-width: 768px) { 
     header {
-        height: 100px;   
+        flex-direction: row; /* Volta ao layout horizontal */
+        height: 80px;
+        justify-content: space-between;
+        padding: 0 20px;
     }
     
     .logo img {
@@ -639,10 +649,7 @@ footer a:hover::before {
     }
     
     nav {
-        display: flex;
-        gap: 0.2rem;
-        align-items: center;
-        margin-left: auto; 
+        margin-left: auto; /* Move a nav para a direita */
     }
     
     nav a {
