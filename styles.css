@@ -232,9 +232,16 @@ main {
 /* POR QUE ESCOLHER */
 
 .porque {
-    background-color: var(--secondary);
+    position: relative;
     padding: 34px 8px;
     text-align: left;
+    overflow: hidden;
+    background-color: var(--secondary);
+    background-image: 
+        linear-gradient(#7a49128c, rgba(0, 0, 0, 0.6)), 
+        url(images/retro-motor-bike-wheel-vector-illustration-vintage-motorcycle-part.png);
+    background-size: cover;
+    background-position: center;
 }
 
 h2 {
