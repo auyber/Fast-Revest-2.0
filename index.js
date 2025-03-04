@@ -1,51 +1,46 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".scroll-image");
-    
-
-    const checkVisibility = () => {
-        images.forEach((image) => {
-            const imageBox = image.parentElement;
-            const imageBoxTop = imageBox.getBoundingClientRect().top;
-            const imageBoxBottom = imageBox.getBoundingClientRect().bottom;
-            const viewportHeight = window.innerHeight;
-            const middleOfViewport = viewportHeight / 2;
-
-            if (imageBoxTop <= middleOfViewport && imageBoxBottom >= middleOfViewport) {
-                image.classList.add("visible");
-                imageBox.style.backgroundColor = "var(--primary)";
-            } else {
-                image.classList.remove("visible");
-                imageBox.style.backgroundColor = "transparent";
-            }
-        });
-    };
-
-    window.addEventListener("scroll", checkVisibility);
-    checkVisibility();
-
-    // Atualiza automaticamente a versão do CSS para evitar cache
-    const link = document.querySelector("link[rel='stylesheet']");
-    if (link) {
-        const url = new URL(link.href);
-        url.searchParams.set("v", Date.now());
-        link.href = url.toString();
+    // ------------------------- FUNÇÃO PARA ATUALIZAR O CSS E EVITAR CACHE -------------------------
+    function updateCSSVersion() {
+        const link = document.querySelector("link[rel='stylesheet']");
+        if (link) {
+            const url = new URL(link.href);
+            url.searchParams.set("v", Date.now()); // Adiciona o timestamp ao parâmetro 'v'
+            link.href = url.toString(); // Atualiza o link do CSS
+        }
     }
 
-    // Carrossel de imagens
-    const slides = document.querySelectorAll('.carousel-slides img');
+    // ------------------------- ANIMAÇÃO DAS IMAGENS -------------------------
+    const images = document.querySelectorAll(".scroll-image");
+
+    function checkVisibility() {
+        const viewportHeight = window.innerHeight;
+        const middleOfViewport = viewportHeight / 2;
+
+        images.forEach((image) => {
+            const imageBox = image.parentElement;
+            const { top, bottom } = imageBox.getBoundingClientRect();
+
+            // Verifica se a imagem está visível
+            const isVisible = top <= middleOfViewport && bottom >= middleOfViewport;
+            image.classList.toggle("visible", isVisible);
+            imageBox.style.backgroundColor = isVisible ? "var(--primary)" : "transparent";
+        });
+    }
+
+    window.addEventListener("scroll", checkVisibility);
+    checkVisibility(); // Chama ao carregar a página
+
+    // ------------------------- CARROSSEL DE IMAGENS -------------------------
+    const slidesContainer = document.querySelector(".carousel-slides");
+    const slides = document.querySelectorAll(".carousel-slides img");
     const totalSlides = slides.length;
     let slideIndex = 0;
     const intervalTime = 5000;
+    let autoSlideInterval;
 
     function showSlide(index) {
-        if (index >= totalSlides) {
-            slideIndex = 0;
-        } else if (index < 0) {
-            slideIndex = totalSlides - 1;
-        } else {
-            slideIndex = index;
-        }
-        document.querySelector('.carousel-slides').style.transform = `translateX(-${slideIndex * 100}%)`;
+        slideIndex = (index + totalSlides) % totalSlides; // Loop infinito
+        slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
     }
 
     function showNextSlide() {
@@ -56,10 +51,28 @@ document.addEventListener("DOMContentLoaded", function () {
         showSlide(slideIndex - 1);
     }
 
-    document.querySelector('.next').addEventListener('click', showNextSlide);
-    document.querySelector('.prev').addEventListener('click', showPrevSlide);
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(showNextSlide, intervalTime);
+    }
 
-    setInterval(showNextSlide, intervalTime);
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+
+    document.querySelector(".next")?.addEventListener("click", () => {
+        showNextSlide();
+        stopAutoSlide();
+        startAutoSlide();
+    });
+
+    document.querySelector(".prev")?.addEventListener("click", () => {
+        showPrevSlide();
+        stopAutoSlide();
+        startAutoSlide();
+    });
+
+    startAutoSlide(); // Inicia o slide automático
+
+    // Atualiza a versão do CSS para forçar o cache
+    updateCSSVersion();
 });
-
-
