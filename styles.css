@@ -41,6 +41,10 @@ header {
     margin: 0 auto;
 }
 
+.logo a:hover {
+    background-color: var(--dark);
+}
+
 .logo img {
     width: 64px;
     height: 64px;
@@ -58,11 +62,32 @@ nav a {
     padding: 4px 6px;
     text-decoration: none;
     color: var(--ligth);
+    position: relative;
+    transition: color 0.3s ease;
 }
 
-a:hover {
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
     background-color: var(--secondary);
+    transform: scaleX(0); /* Começa invisível */
+    transform-origin: right;
+    transition: transform 0.3s ease-out;
 }
+
+nav a:hover {
+    color: var(--secondary); /* Muda a cor do texto */
+}
+
+nav a:hover::after {
+    transform: scaleX(1); /* Expande o sublinhado */
+    transform-origin: left;
+}
+
 
 .hero {
     margin: 16px 8px;
@@ -90,10 +115,20 @@ p {
     margin: 0.2rem;
     border-radius: 30px;
     border: 1px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buttons button:hover {
+    transform: scale(1.1); /* Aumenta o tamanho ao passar o mouse */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Brilho suave */
 }
 
 .buttons button:nth-child(2) {
     border: 1px solid var(--primary);
+}
+
+.buttons button:nth-child(2):hover {
+    box-shadow: 0 0 15px var(--primary); /* Brilho na cor principal */
 }
 
 .primary {
@@ -136,8 +171,6 @@ p {
     border-radius: 5px;
 }
 
-
-/* Nova seção de imagens */
 .image-section {
     gap: 05px;
     max-width: 500px;
@@ -351,6 +384,14 @@ button.next {
     border-radius: 10px;
     margin: 0 auto;
     padding: 4px 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.sobre button:hover {
+    cursor: pointer;
+    transform: scale(1.1); /* Aumenta levemente o botão */
+    box-shadow: 0 0 10px var(--primary); /* Adiciona um brilho */
+    background-color: var(--secondary); /* Troca a cor de fundo para outra (caso tenha uma variável definida) */
 }
 
 .gif img {
@@ -471,7 +512,28 @@ footer p {
 footer a {
     text-decoration: none;
     color: var(--ligth);
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
 }
+
+footer a::before {
+    position: absolute;
+    left: -20px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+footer a:hover {
+    color: blue;
+    text-shadow: 0px 0px 10px var(--primary);
+}
+
+footer a:hover::before {
+    opacity: 1;
+    transform: translateX(5px); /* Move um pouco para o lado */
+}
+
 
 .icon {
     font-size: 8px;
@@ -668,6 +730,10 @@ footer a {
         font-size: 18px;
     }
 
+    .hero {
+        height: 50vh;
+    }
+
     .content {
         max-width: 1200px;
         width: 100%;
@@ -706,6 +772,24 @@ footer a {
         color: white;
         border: 1px solid white;
     }
+    
+    .image-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px; /* Ajuste conforme necessário */
+        width: calc(100% - 16px);
+        margin: 41px auto;
+    }
+    
+    .image-section > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        min-width: 250px;
+    }
 
     .carousel-container {
         max-width: 1200px;
@@ -719,5 +803,6 @@ footer a {
         margin: 0 auto;
         margin-bottom: 48px;
     }
-    
+
+           
 }
