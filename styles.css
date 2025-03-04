@@ -811,6 +811,11 @@ footer a:hover::before {
         margin-bottom: 36px;
     }
 
+    /* SOMBRA APLICADA A VÁRIOS ITENS */
+    .image-box, .porque, #sobrenos, .carousel {
+        box-shadow: 1px 1px 8px rgba(235, 231, 231, 0.15);
+        border-radius: 8px;
+    }
 
 }
 
