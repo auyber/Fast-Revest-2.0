@@ -10,6 +10,7 @@
     /* FONTS */
     --fonttitles: 'Times New Roman', Times, serif;
     --fontothers: Arial, sans-serif;
+    --fontlogo: 'Fredericka the Great', serif;
 
     /* FONTSIZE */
     --48px: 3rem;
@@ -33,6 +34,7 @@ body {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    min-width: 300px;
 }
 
 /* MENU DE NAVEGAÇÃO */
@@ -62,15 +64,20 @@ header {
     margin: 8px;
 }
 
+.logo p {
+    font-family: var(--fontlogo);
+    font-size: var(--24px);
+}
+
 nav {
     display: flex;
     gap: 0.2rem;
     align-items: center;
-    margin-left: auto; 
+    margin: auto; 
 }
 
 nav a {
-    padding: 4px 6px;
+    padding: 4px 4px;
     text-decoration: none;
     color: var(--ligth);
     position: relative;
@@ -637,20 +644,20 @@ footer a:hover::before {
 
 @media screen and (min-width: 768px) { 
     header {
-        flex-direction: row; /* Volta ao layout horizontal */
+        flex-direction: row;
         height: 80px;
         justify-content: space-between;
-        padding: 0 20px;
+        padding: 8px 20px;
     }
     
     .logo img {
         width: 80px;
         height: 80px;
-        margin: 30px;
     }
     
     nav {
-        margin-left: auto; /* Move a nav para a direita */
+        text-align: right;
+        margin: 0;
     }
     
     nav a {
