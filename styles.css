@@ -274,9 +274,10 @@ article p {
    margin: 0;
 }
 
-.galeria-tittle {
+#galeria-title {
     text-align: left;
     margin: 36px 8px 16px 8px;
+    color: var(--primary);
 }
 
 .carousel-container {
