@@ -1,277 +1,318 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fast Revest Revestimentos</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="index.js" defer></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fredericka+the+Great&family=Limelight&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header id="menu" role="banner">
-        <span class="logo">
-            <a href="index.html" aria-label="Página inicial da Fast Revest">
-                <img src="images/logo.png" alt="logo da fast revest revestimentos, o logo é um volante com 2 estrelas para enfatizar que está brilhando, e um pincel">
-            </a>
-            <p id="logo-title">Fast Revest</p>
-        </span>
-        <nav role="navigation" aria-label="Navegação principal">
-            <a href="index.html" aria-label="Ir para a página inicial">Início</a>
-            <a href="#vantagens" aria-label="Ir para a seção de vantagens">Vantagens</a>
-            <a href="#galeria-title" aria-label="Ir para a galeria">Galeria</a>
-            <a href="#sobrenos" aria-label="Ir para a seção sobre nós">Sobre</a>
-            <a href="#contato" aria-label="Ir para a seção de contato">Contato</a>
-        </nav>
-    </header>
-
-    <main role="main">
-        <section class="hero" aria-labelledby="hero-title">
-            <div class="container">
-                <div class="content">
-                    <h1 id="hero-title">Seu volante novo, onde você estiver!</h1>
-                    <p>Seu automóvel merece o melhor em proteção e estilo, e é por isso que estamos aqui!
-                    <br>
-                    <strong>Atendemos em Balneário Camboriú e região.</strong>
-                    </p>
-                    <div class="buttons">
-                        <a href="https://wa.me/5515998428319" target="_blank" aria-label="Agendar atendimento pelo WhatsApp">
-                            <button class="primary">Agende agora mesmo!</button>
-                        </a>
-                        <a href="#galeria-title" aria-label="Ir para a galeria de imagens">
-                            <button class="secondary">Confira nossa Galeria</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fast Revest Revestimentos</title>
     
-        <section class="image-section" aria-labelledby="image-gallery-title">
-            <h2 id="image-gallery-title" class="sr-only">Galeria de Volantes Revestidos</h2>
-            <div>
-                <div class="image-box">
-                    <img src="images/hero-1.jpeg" alt="Volante de um carro da KIA com capa costurada e linha de costura vermelha." class="scroll-image">
-                </div>
-                <p>Costura de Alta Qualidade</p>
-            </div>
-            <div>
-                <div class="image-box">
-                    <img src="images/hero-2.jpeg" alt="Volante de um carro da Hyundai com capa costurada e linha de costura preta." class="scroll-image">
-                </div>
-                <p>Proteção e Estilo</p>
-            </div>
-            <div id="total-large">
-                <div class="image-box">
-                    <img src="images/hero-3.jpg" alt="Volante de um carro da Nissan com capa costurada e linha de costura preta." class="scroll-image">
-                </div>
-                <p>Sustentabilidade Garantida</p>
-            </div>
-        </section>
+        <!-- Descrição do site -->
+        <meta name="description" content="A Fast Revest oferece instalação de capas automotivas personalizadas, com um serviço móvel em Balneário Camboriú e região, utilizando materiais ecológicos e costura de alta qualidade para garantir conforto, proteção e estilo ao seu carro.">
+        
+        <!-- Palavras-chave -->
+        <meta name="keywords" content="capas automotivas, revestimentos, Balneário Camboriú, serviço móvel, personalização de volante, proteção e estilo, costura de qualidade, sustentabilidade, atendimento personalizado">
+        
+        <!-- Autor do site -->
+        <meta name="author" content="Auyber Genesini Moura">
+        
+        <!-- Imagem para compartilhamento social -->
+        <meta property="og:image" content="images/logo.png">
+        
+        <!-- Título para compartilhamento social -->
+        <meta property="og:title" content="Fast Revest Revestimentos">
+        
+        <!-- Descrição para compartilhamento social -->
+        <meta property="og:description" content="Renove o interior do seu carro com a Fast Revest, que oferece capas automotivas personalizadas com um atendimento móvel em Balneário Camboriú e região. Qualidade e conforto garantidos!">
+        
+        <!-- URL para compartilhamento social -->
+        <meta property="og:url" content="https://www.fastrevest.com.br">
+        
+        <!-- Tipo de conteúdo -->
+        <meta property="og:type" content="website">
+        
+        <!-- Geolocalização -->
+        <meta name="geo.region" content="BR-SC">
+        <meta name="geo.placename" content="Balneário Camboriú">
+        <meta name="geo.position" content="-27.0001;-48.6415">
+        <meta name="ICBM" content="27.0001,-48.6415">
+    
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+        
+        <!-- Preconnect para otimização de fontes -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fredericka+the+Great&family=Limelight&family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+        
+        <!-- CSS do site -->
+        <link rel="stylesheet" href="styles.css">
+        
+        <!-- Scripts -->
+        <script src="index.js" defer></script>
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    
+    <body>
+        <header id="menu" role="banner">
+            <span class="logo">
+                <a href="index.html" aria-label="Página inicial da Fast Revest">
+                    <img src="images/logo.png" alt="logo da fast revest revestimentos, o logo é um volante com 2 estrelas para enfatizar que está brilhando, e um pincel">
+                </a>
+                <p id="logo-title">Fast Revest</p>
+            </span>
+            <nav role="navigation" aria-label="Navegação principal">
+                <a href="index.html" aria-label="Ir para a página inicial">Início</a>
+                <a href="#vantagens" aria-label="Ir para a seção de vantagens">Vantagens</a>
+                <a href="#galeria-title" aria-label="Ir para a galeria">Galeria</a>
+                <a href="#sobrenos" aria-label="Ir para a seção sobre nós">Sobre</a>
+                <a href="#contato" aria-label="Ir para a seção de contato">Contato</a>
+            </nav>
+        </header>
 
-        <section class="porque" id="vantagens" aria-labelledby="vantagens-title">
-            <h2 id="vantagens-title">Por que escolher a Fast Revest?</h2>
-            
-            <article aria-labelledby="conveniencia-title">
-                <h3 id="conveniencia-title">Conveniência</h3>
-                <p>Diga adeus às idas à loja! Nosso serviço móvel leva a personalização do seu volante até você, garantindo praticidade e economia de tempo.</p>
-            </article>
-            
-            <article aria-labelledby="qualidade-title">
-                <h3 id="qualidade-title">Qualidade Garantida</h3>
-                <p>Trabalhamos apenas com materiais premium e técnicas avançadas de instalação, assegurando um acabamento impecável e a durabilidade que seu veículo merece.</p>
-            </article>
-            
-            <article aria-labelledby="atendimento-title">
-                <h3 id="atendimento-title">Atendimento Personalizado</h3>
-                <p>Cada cliente é único! Auxiliamos na escolha da melhor capa para seu carro, com um atendimento sob medida para atender suas preferências e necessidades.</p>
-            </article>
-            
-            <article aria-labelledby="sustentabilidade-title">
-                <h3 id="sustentabilidade-title">Compromisso com o Meio Ambiente</h3>
-                <p>Nossas capas ecológicas são feitas com materiais sustentáveis, garantindo proteção e estilo sem agredir o meio ambiente. Escolha consciente, sem abrir mão da qualidade!</p>
-            </article>
-            
-            <article class="last" aria-labelledby="estilo-seguranca-title">
-                <h3 id="estilo-seguranca-title">Estilo e Segurança</h3>
-                <p>Além de proteger, nossas capas adicionam um toque sofisticado ao interior do seu carro. Com costura precisa e ajuste perfeito, proporcionamos mais conforto e aderência ao dirigir.</p>
-            </article>
-        </section>        
-        
-        <h2 id="galeria-title">Galeria</h2>
-        <section id="galeria" class="carousel-container" aria-labelledby="galeria-title">
-            <div class="carousel-container">
-                <div class="carousel">
-                    <div class="carousel-slides">
-                        <div class="slide">
-                            <a href="https://wa.me/5515998428319" target="_blank">
-                                <img src="images/gallery-1.jpeg" alt="Imagem de volante de um carro da Volkswagen com capa costurada e linha vermelha." class="inicio">
-                                <div class="caption">Agende agora mesmo</div>
+        <main role="main">
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="container">
+                    <div class="content">
+                        <h1 id="hero-title">Seu volante novo, onde você estiver!</h1>
+                        <p>Seu automóvel merece o melhor em proteção e estilo, e é por isso que estamos aqui!
+                        <br>
+                        <strong>Atendemos em Balneário Camboriú e região.</strong>
+                        </p>
+                        <div class="buttons">
+                            <a href="https://wa.me/5515998428319" target="_blank" aria-label="Agendar atendimento pelo WhatsApp">
+                                <button class="primary">Agende agora mesmo!</button>
                             </a>
-                        </div>
-                        <div class="slide">
-                            <a href="https://wa.me/5515998428319" target="_blank">
-                                <img src="images/gallery-2.jpg" alt="Imagem de volante de um carro da Ford com capa costurada e linha preta." class="inicio">
-                                <div class="caption">Agende agora mesmo</div>
-                            </a>
-                        </div>
-                        <div class="slide">
-                            <a href="https://wa.me/5515998428319" target="_blank">
-                                <img src="images/gallery-3.jpg" alt="Imagem de volante de um carro da Volkswagen com capa costurada e linha preta." class="inicio">
-                                <div class="caption">Agende agora mesmo</div>
-                            </a>
-                        </div>
-                        <div class="slide">
-                            <a href="https://wa.me/5515998428319" target="_blank">
-                                <img src="images/hero-1.jpeg" alt="Imagem de volante de um carro da KIA com capa costurada e linha preta." class="inicio">
-                                <div class="caption">Agende agora mesmo</div>
-                            </a>
-                        </div>
-                        <div class="slide">
-                            <a href="https://wa.me/5515998428319" target="_blank">
-                                <img src="images/gallery-4.jpg" alt="Imagem de volante de um carro da Renault com capa costurada e linha preta." class="inicio">
-                                <div class="caption">Agende agora mesmo</div>
-                            </a>
-                        </div>
-                        <div class="slide">
-                            <a href="https://wa.me/5515998428319" target="_blank">
-                                <img src="images/gallery-5.jpg" alt="Imagem de volante de um carro da Fiat com capa costurada e linha preta." class="inicio">
-                                <div class="caption">Agende agora mesmo</div>
-                            </a>
-                        </div>
-                        <div class="slide">
-                            <a href="https://wa.me/5515998428319" target="_blank">
-                                <img src="images/hero-2.jpeg" alt="Imagem de volante de um carro da Hyundai com capa costurada e linha preta." class="inicio">
-                                <div class="caption">Agende agora mesmo</div>
-                            </a>
-                        </div>
-                        <div class="slide">
-                            <a href="https://wa.me/5515998428319" target="_blank">
-                                <img src="images/gallery-6.jpg" alt="Imagem de volante de um carro da Ford com capa costurada e linha preta." class="inicio">
-                                <div class="caption">Agende agora mesmo</div>
-                            </a>
-                        </div>
-                        <div class="slide">
-                            <a href="https://wa.me/5515998428319" target="_blank">
-                                <img src="images/gallery-7.jpg" alt="Imagem de volante personalizado com capa costurada." class="inicio">
-                                <div class="caption">Agende agora mesmo</div>
-                            </a>
-                        </div>
-                        <div class="slide">
-                            <a href="https://wa.me/5515998428319" target="_blank">
-                                <img src="images/hero-3.jpg" alt="Imagem de volante de um carro da Nissan com capa costurada e linha preta." class="inicio">
-                                <div class="caption">Agende agora mesmo</div>
-                            </a>
-                        </div>
-                        <div class="slide">
-                            <a href="https://wa.me/5515998428319" target="_blank">
-                                <img src="images/gallery-8.jpg" alt="Montagem comparando dois volantes da Ford: um sem costura e outro com capa costurada e linha preta." class="inicio">
-                                <div class="caption">Agende agora mesmo</div>
+                            <a href="#galeria-title" aria-label="Ir para a galeria de imagens">
+                                <button class="secondary">Confira nossa Galeria</button>
                             </a>
                         </div>
                     </div>
-                    <button class="prev" aria-label="Imagem anterior">&#10094;</button>
-                    <button class="next" aria-label="Próxima imagem">&#10095;</button>
                 </div>
-            </div>    
-        </section>
+            </section>
+        
+            <section class="image-section" aria-labelledby="image-gallery-title">
+                <h2 id="image-gallery-title" class="sr-only">Galeria de Volantes Revestidos</h2>
+                <div>
+                    <div class="image-box">
+                        <img src="images/hero-1.jpeg" alt="Volante de um carro da KIA com capa costurada e linha de costura vermelha." class="scroll-image">
+                    </div>
+                    <p>Costura de Alta Qualidade</p>
+                </div>
+                <div>
+                    <div class="image-box">
+                        <img src="images/hero-2.jpeg" alt="Volante de um carro da Hyundai com capa costurada e linha de costura preta." class="scroll-image">
+                    </div>
+                    <p>Proteção e Estilo</p>
+                </div>
+                <div id="total-large">
+                    <div class="image-box">
+                        <img src="images/hero-3.jpg" alt="Volante de um carro da Nissan com capa costurada e linha de costura preta." class="scroll-image">
+                    </div>
+                    <p>Sustentabilidade Garantida</p>
+                </div>
+            </section>
 
-        <section id="sobrenos" aria-labelledby="titulo-sobrenos" aria-describedby="descricao-sobrenos">
-            <div>
-                <img class="sobre-img" src="images/sobrenos.jpg" alt="Volante de carro visto do ângulo do passageiro, revestido com capa costurada de alta qualidade." role="img">
-            </div>
-            
-            <div>
-                <h2 id="titulo-sobrenos">Sobre Nós</h2>
-        
-                <!-- Texto padrão para mobile -->
-                <p class="texto-mobile" id="descricao-sobrenos">
-                    A Fast Revest oferece instalação de capas automotivas personalizadas com praticidade e qualidade, atendendo você onde estiver em Balneário Camboriú e região. Nosso atendimento móvel elimina a necessidade de deslocamento, levando até você capas sob medida, feitas com materiais ecológicos e costura personalizada, garantindo conforto, proteção e um acabamento impecável. Com qualidade garantida e serviço personalizado, cuidamos do seu carro com atenção aos mínimos detalhes.
-                </p>
-        
-                <!-- Texto expandido para telas maiores -->
-                <p class="texto-desktop">
-                    A Fast Revest nasceu para unir proteção, estilo e conveniência para o seu automóvel. Somos especialistas em capas automotivas personalizadas, oferecendo um serviço exclusivo em Balneário Camboriú e região.
-                    Nosso diferencial é o atendimento móvel, levando a instalação até você, seja em casa, no trabalho ou onde preferir, eliminando a necessidade de deslocamento e tornando tudo mais prático.
-                    Utilizamos materiais ecológicos de alta qualidade e costura personalizada, garantindo conforto, durabilidade e um acabamento impecável para seu veículo.
-                    Na Fast Revest, cada detalhe importa. Nosso compromisso é oferecer qualidade garantida, atendimento personalizado e um serviço ágil para que seu carro tenha sempre o melhor em proteção e design.
-                </p>
-            </div>
-        
-            <div class="sobre">
-                <span class="gif" aria-hidden="true">
-                    <img src="images/volante.gif" alt="">
-                </span>
-                <a href="https://wa.me/5515998428319" target="_blank">
-                    <button aria-label="Agende agora pelo WhatsApp e transforme o interior do seu veículo!">
-                        Agende agora e transforme o interior do seu veículo!
-                    </button>
-                </a>
-            </div>
-        </section>
-        
-        <section id="contato" aria-labelledby="contato-heading">
-            <h2 id="contato-heading">Entre em Contato</h2>
-            <p>Quer renovar seu volante?</p>
-            <p>Envie-nos uma mensagem pelo WhatsApp para um orçamento personalizado!</p>
-            
-            <div class="wrapper">
-                <a class="whats" href="https://wa.me/5515998428319" target="_blank" aria-label="Enviar mensagem pelo WhatsApp">
-                    <div class="button">
-                        <div class="icon" aria-hidden="true">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                        <span>WhatsApp</span>
-                    </div>
-                </a>
-            </div>
-            
-            <p>E não se esqueça de nos seguir no Instagram e Facebook para inspirações e novidades!</p>
-            
-            <div class="wrapper">
-                <a class="insta" href="https://www.instagram.com/revestfast?igsh=cWJkMHRldWd2NGE0" target="_blank" aria-label="Siga-nos no Instagram">
-                    <div class="button">
-                        <div class="icon" aria-hidden="true">
-                            <i class="fab fa-instagram"></i>
-                        </div>
-                        <span>Instagram</span>
-                    </div>
-                </a>
+            <section class="porque" id="vantagens" aria-labelledby="vantagens-title">
+                <h2 id="vantagens-title">Por que escolher a Fast Revest?</h2>
                 
-                <a class="face" href="https://www.facebook.com/Fastrevest" target="_blank" aria-label="Siga-nos no Facebook">
-                    <div class="button">
-                        <div class="icon" aria-hidden="true">
-                            <i class="fab fa-facebook-f"></i>
+                <article aria-labelledby="conveniencia-title">
+                    <h3 id="conveniencia-title">Conveniência</h3>
+                    <p>Diga adeus às idas à loja! Nosso serviço móvel leva a personalização do seu volante até você, garantindo praticidade e economia de tempo.</p>
+                </article>
+                
+                <article aria-labelledby="qualidade-title">
+                    <h3 id="qualidade-title">Qualidade Garantida</h3>
+                    <p>Trabalhamos apenas com materiais premium e técnicas avançadas de instalação, assegurando um acabamento impecável e a durabilidade que seu veículo merece.</p>
+                </article>
+                
+                <article aria-labelledby="atendimento-title">
+                    <h3 id="atendimento-title">Atendimento Personalizado</h3>
+                    <p>Cada cliente é único! Auxiliamos na escolha da melhor capa para seu carro, com um atendimento sob medida para atender suas preferências e necessidades.</p>
+                </article>
+                
+                <article aria-labelledby="sustentabilidade-title">
+                    <h3 id="sustentabilidade-title">Compromisso com o Meio Ambiente</h3>
+                    <p>Nossas capas ecológicas são feitas com materiais sustentáveis, garantindo proteção e estilo sem agredir o meio ambiente. Escolha consciente, sem abrir mão da qualidade!</p>
+                </article>
+                
+                <article class="last" aria-labelledby="estilo-seguranca-title">
+                    <h3 id="estilo-seguranca-title">Estilo e Segurança</h3>
+                    <p>Além de proteger, nossas capas adicionam um toque sofisticado ao interior do seu carro. Com costura precisa e ajuste perfeito, proporcionamos mais conforto e aderência ao dirigir.</p>
+                </article>
+            </section>        
+            
+            <h2 id="galeria-title">Galeria</h2>
+            <section id="galeria" class="carousel-container" aria-labelledby="galeria-title">
+                <div class="carousel-container">
+                    <div class="carousel">
+                        <div class="carousel-slides">
+                            <div class="slide">
+                                <a href="https://wa.me/5515998428319" target="_blank">
+                                    <img src="images/gallery-1.jpeg" alt="Imagem de volante de um carro da Volkswagen com capa costurada e linha vermelha." class="inicio">
+                                    <div class="caption">Agende agora mesmo</div>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="https://wa.me/5515998428319" target="_blank">
+                                    <img src="images/gallery-2.jpg" alt="Imagem de volante de um carro da Ford com capa costurada e linha preta." class="inicio">
+                                    <div class="caption">Agende agora mesmo</div>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="https://wa.me/5515998428319" target="_blank">
+                                    <img src="images/gallery-3.jpg" alt="Imagem de volante de um carro da Volkswagen com capa costurada e linha preta." class="inicio">
+                                    <div class="caption">Agende agora mesmo</div>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="https://wa.me/5515998428319" target="_blank">
+                                    <img src="images/hero-1.jpeg" alt="Imagem de volante de um carro da KIA com capa costurada e linha preta." class="inicio">
+                                    <div class="caption">Agende agora mesmo</div>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="https://wa.me/5515998428319" target="_blank">
+                                    <img src="images/gallery-4.jpg" alt="Imagem de volante de um carro da Renault com capa costurada e linha preta." class="inicio">
+                                    <div class="caption">Agende agora mesmo</div>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="https://wa.me/5515998428319" target="_blank">
+                                    <img src="images/gallery-5.jpg" alt="Imagem de volante de um carro da Fiat com capa costurada e linha preta." class="inicio">
+                                    <div class="caption">Agende agora mesmo</div>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="https://wa.me/5515998428319" target="_blank">
+                                    <img src="images/hero-2.jpeg" alt="Imagem de volante de um carro da Hyundai com capa costurada e linha preta." class="inicio">
+                                    <div class="caption">Agende agora mesmo</div>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="https://wa.me/5515998428319" target="_blank">
+                                    <img src="images/gallery-6.jpg" alt="Imagem de volante de um carro da Ford com capa costurada e linha preta." class="inicio">
+                                    <div class="caption">Agende agora mesmo</div>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="https://wa.me/5515998428319" target="_blank">
+                                    <img src="images/gallery-7.jpg" alt="Imagem de volante personalizado com capa costurada." class="inicio">
+                                    <div class="caption">Agende agora mesmo</div>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="https://wa.me/5515998428319" target="_blank">
+                                    <img src="images/hero-3.jpg" alt="Imagem de volante de um carro da Nissan com capa costurada e linha preta." class="inicio">
+                                    <div class="caption">Agende agora mesmo</div>
+                                </a>
+                            </div>
+                            <div class="slide">
+                                <a href="https://wa.me/5515998428319" target="_blank">
+                                    <img src="images/gallery-8.jpg" alt="Montagem comparando dois volantes da Ford: um sem costura e outro com capa costurada e linha preta." class="inicio">
+                                    <div class="caption">Agende agora mesmo</div>
+                                </a>
+                            </div>
                         </div>
-                        <span>Facebook</span>
+                        <button class="prev" aria-label="Imagem anterior">&#10094;</button>
+                        <button class="next" aria-label="Próxima imagem">&#10095;</button>
                     </div>
-                </a>
-            </div>
-        </section>
-        
-    </main>
+                </div>    
+            </section>
 
-    <footer aria-labelledby="footer-info">
-    <p id="footer-info">© Todos os direitos reservados. Fast Revest Revestimentos 2024. | Criação de Sites by 
-        <a class="link" href="https://www.linkedin.com/in/auyber-genesini-moura-58b258144/" target="_blank" aria-label="Perfil do LinkedIn de Auyber Genesini Moura">Auyber Genesini Moura</a>.
-    </p>
-    <a class="icon" href="https://www.flaticon.com/br/icones-animados-gratis/volante" title="Volante ícones animados" aria-label="Volante ícones animados criados por Freepik - Flaticon">
-        Volante ícones animados criados por Freepik - Flaticon
-    </a>
-    </footer>
+            <section id="sobrenos" aria-labelledby="titulo-sobrenos" aria-describedby="descricao-sobrenos">
+                <div>
+                    <img class="sobre-img" src="images/sobrenos.jpg" alt="Volante de carro visto do ângulo do passageiro, revestido com capa costurada de alta qualidade." role="img">
+                </div>
+                
+                <div>
+                    <h2 id="titulo-sobrenos">Sobre Nós</h2>
+            
+                    <!-- Texto padrão para mobile -->
+                    <p class="texto-mobile" id="descricao-sobrenos">
+                        A Fast Revest oferece instalação de capas automotivas personalizadas com praticidade e qualidade, atendendo você onde estiver em Balneário Camboriú e região. Nosso atendimento móvel elimina a necessidade de deslocamento, levando até você capas sob medida, feitas com materiais ecológicos e costura personalizada, garantindo conforto, proteção e um acabamento impecável. Com qualidade garantida e serviço personalizado, cuidamos do seu carro com atenção aos mínimos detalhes.
+                    </p>
+            
+                    <!-- Texto expandido para telas maiores -->
+                    <p class="texto-desktop">
+                        A Fast Revest nasceu para unir proteção, estilo e conveniência para o seu automóvel. Somos especialistas em capas automotivas personalizadas, oferecendo um serviço exclusivo em Balneário Camboriú e região.
+                        Nosso diferencial é o atendimento móvel, levando a instalação até você, seja em casa, no trabalho ou onde preferir, eliminando a necessidade de deslocamento e tornando tudo mais prático.
+                        Utilizamos materiais ecológicos de alta qualidade e costura personalizada, garantindo conforto, durabilidade e um acabamento impecável para seu veículo.
+                        Na Fast Revest, cada detalhe importa. Nosso compromisso é oferecer qualidade garantida, atendimento personalizado e um serviço ágil para que seu carro tenha sempre o melhor em proteção e design.
+                    </p>
+                </div>
+            
+                <div class="sobre">
+                    <span class="gif" aria-hidden="true">
+                        <img src="images/volante.gif" alt="">
+                    </span>
+                    <a href="https://wa.me/5515998428319" target="_blank">
+                        <button aria-label="Agende agora pelo WhatsApp e transforme o interior do seu veículo!">
+                            Agende agora e transforme o interior do seu veículo!
+                        </button>
+                    </a>
+                </div>
+            </section>
+            
+            <section id="contato" aria-labelledby="contato-heading">
+                <h2 id="contato-heading">Entre em Contato</h2>
+                <p>Quer renovar seu volante?</p>
+                <p>Envie-nos uma mensagem pelo WhatsApp para um orçamento personalizado!</p>
+                
+                <div class="wrapper">
+                    <a class="whats" href="https://wa.me/5515998428319" target="_blank" aria-label="Enviar mensagem pelo WhatsApp">
+                        <div class="button">
+                            <div class="icon" aria-hidden="true">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <span>WhatsApp</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <p>E não se esqueça de nos seguir no Instagram e Facebook para inspirações e novidades!</p>
+                
+                <div class="wrapper">
+                    <a class="insta" href="https://www.instagram.com/revestfast?igsh=cWJkMHRldWd2NGE0" target="_blank" aria-label="Siga-nos no Instagram">
+                        <div class="button">
+                            <div class="icon" aria-hidden="true">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <span>Instagram</span>
+                        </div>
+                    </a>
+                    
+                    <a class="face" href="https://www.facebook.com/Fastrevest" target="_blank" aria-label="Siga-nos no Facebook">
+                        <div class="button">
+                            <div class="icon" aria-hidden="true">
+                                <i class="fab fa-facebook-f"></i>
+                            </div>
+                            <span>Facebook</span>
+                        </div>
+                    </a>
+                </div>
+            </section>
+            
+        </main>
 
-    <a class="arrow-up" href="#menu" aria-label="Voltar para o menu">
-        <img src="images/arrow-up.gif" alt="Uma seta apontando para cima que fica em um loop de baixo para cima.">
-    </a>
-    <div class="arrow-text" aria-live="polite">Voltar <br> para o Menu</div>
+        <footer aria-labelledby="footer-info">
+        <p id="footer-info">© Todos os direitos reservados. Fast Revest Revestimentos 2024. | Criação de Sites by 
+            <a class="link" href="https://www.linkedin.com/in/auyber-genesini-moura-58b258144/" target="_blank" aria-label="Perfil do LinkedIn de Auyber Genesini Moura">Auyber Genesini Moura</a>.
+        </p>
+        <a class="icon" href="https://www.flaticon.com/br/icones-animados-gratis/volante" title="Volante ícones animados" aria-label="Volante ícones animados criados por Freepik - Flaticon">
+            Volante ícones animados criados por Freepik - Flaticon
+        </a>
+        </footer>
 
-    <!-- WhatsApp Flutuante -->
-    <a href="https://wa.me/5515998428319" target="_blank" class="whatsapp-button" aria-label="Enviar mensagem no WhatsApp para solicitar orçamento">
-        <img src="images/whatsapp.svg" alt="Botão flutuante do WhatsApp com o texto 'Solicite seu Orçamento'.">
-    </a>
-    <div class="whatsapp-text" aria-live="polite">Solicite <br> seu Orçamento</div>
-</body>
+        <a class="arrow-up" href="#menu" aria-label="Voltar para o menu">
+            <img src="images/arrow-up.gif" alt="Uma seta apontando para cima que fica em um loop de baixo para cima.">
+        </a>
+        <div class="arrow-text" aria-live="polite">Voltar <br> para o Menu</div>
+
+        <!-- WhatsApp Flutuante -->
+        <a href="https://wa.me/5515998428319" target="_blank" class="whatsapp-button" aria-label="Enviar mensagem no WhatsApp para solicitar orçamento">
+            <img src="images/whatsapp.svg" alt="Botão flutuante do WhatsApp com o texto 'Solicite seu Orçamento'.">
+        </a>
+        <div class="whatsapp-text" aria-live="polite">Solicite <br> seu Orçamento</div>
+    </body>
 </html>
