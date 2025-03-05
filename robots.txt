@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /privado/
+
+Sitemap: https://seusite.com/sitemap.xml

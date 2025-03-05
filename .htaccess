@@ -1,0 +1,15 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+# Remove o .html das URLs (somente para index.html)
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^index\.html$ / [R=301,L]
+
+# Define index.html como página inicial
+DirectoryIndex index.html
+
+# Impede acesso direto a arquivos sensíveis (se necessário)
+<FilesMatch "\.(htaccess|htpasswd|config|sql|log|bak)$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
