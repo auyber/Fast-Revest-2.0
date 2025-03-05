@@ -835,6 +835,10 @@ footer a:hover::before {
         font-size: 18px;
     }
 
+    .logo p {
+        font-size: 36px;
+    }
+
     .hero {
         height: 50vh;
     }
