@@ -73,6 +73,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     startAutoSlide(); // Inicia o slide automático
 
+    // ------------------------- ROLOU SUAVE PARA ANCORAS -------------------------
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // Impede que a URL mude
+
+            // Rola suavemente até a seção correspondente
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
     // Atualiza a versão do CSS para forçar o cache
     updateCSSVersion();
 });

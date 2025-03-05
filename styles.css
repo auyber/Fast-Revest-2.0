@@ -83,7 +83,9 @@ nav a {
     color: var(--ligth);
     position: relative;
     transition: color 0.3s ease;
+    font-size: 12px;
 }
+
 
 nav a::after {
     content: "";
@@ -114,7 +116,7 @@ nav a:hover::after {
 
 .content h1 {
     color: var(--primary);
-    font-size: 30px;
+    font-size: 24px;
     margin: 0px;
     margin-bottom: 8px;
     font-family: var(--fonttitles);
@@ -653,7 +655,7 @@ footer a:hover::before {
         width: 80px;
         height: 80px;
     }
-    
+
     nav {
         text-align: right;
         margin: 0;
