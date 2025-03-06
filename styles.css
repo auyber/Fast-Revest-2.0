@@ -31,28 +31,28 @@ body {
     background: var(--dark);
     color: var(--ligth);
     font-family: var(--fontp);
-    text-align: center;
-    scroll-behavior: smooth;
     margin: 0;
-    padding: 0;
     min-width: 300px;
+    padding: 0;
+    scroll-behavior: smooth;
+    text-align: center;
 }
 
 /* MENU DE NAVEGAÇÃO */
 
 header {
+    align-items: center;
     display: flex;
     flex-direction: column;
+    height: 100px;
     justify-content: space-between;
-    align-items: center;
-    height: 100px;   
     margin: 0 auto;
 }
 
 .logo {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    align-items: center;
 }
 
 .logo a:hover {
@@ -60,9 +60,9 @@ header {
 }
 
 .logo img {
-    width: 64px;
     height: 64px;
     margin: 8px;
+    width: 64px;
 }
 
 .logo p {
@@ -71,33 +71,32 @@ header {
 }
 
 nav {
+    align-items: center;
     display: flex;
     gap: 0.2rem;
-    align-items: center;
-    margin: auto; 
+    margin: auto;
 }
 
 nav a {
-    padding: 4px 4px;
-    text-decoration: none;
     color: var(--ligth);
-    position: relative;
-    transition: color 0.3s ease;
     font-size: 12px;
+    padding: 4px 4px;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-
 nav a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
     background-color: var(--secondary);
-    transform: scaleX(0); /* Começa invisível */
+    bottom: -2px;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-out;
+    width: 100%;
 }
 
 nav a:hover {
@@ -109,22 +108,21 @@ nav a:hover::after {
     transform-origin: left;
 }
 
-
 .hero {
     margin: 16px 8px;
 }
 
 .content h1 {
     color: var(--primary);
+    font-family: var(--fonttitles);
     font-size: 24px;
     margin: 0px;
     margin-bottom: 8px;
-    font-family: var(--fonttitles);
 }
 
 .content p {
-    margin: 0px 21px;
     font-size: 18px;
+    margin: 0px 21px;
 }
 
 p {
@@ -132,17 +130,17 @@ p {
 }
 
 .buttons button {
-    font-size: var(--16px);
-    margin-top: 0px;
-    margin: 0.2rem;
-    border-radius: 30px;
     border: 1px solid white;
+    border-radius: 30px;
+    font-size: var(--16px);
+    margin: 0.2rem;
+    margin-top: 0px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .buttons button:hover {
-    transform: scale(1.1);
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
 }
 
 .buttons button:nth-child(2) {
@@ -165,14 +163,14 @@ p {
 
 /* Container */
 .container {
-    max-width: 1200px;
-    width: 100%;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     height: 50vh;
+    justify-content: center;
     margin: auto;
+    max-width: 1200px;
+    width: 100%;
 }
 
 /* Seção de conteúdo */
@@ -187,55 +185,55 @@ p {
 }
 
 .primary, .secondary {
-    padding: 10px 20px;
     border: none;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
 }
 
 .image-section {
     gap: 05px;
+    margin: 41px auto;
     max-width: 500px;
     width: calc(100% - 16px);
-    margin: 41px auto;
 }
 
 .image-section p {
-    margin-bottom: 48px;
     color: var(--primary);
+    margin-bottom: 48px;
 }
 
 .image-box {
-    width: 100%;
-    max-width: 1200px;
-    height: 250px;
+    align-items: center;
+    border: 1px solid white;
     border-radius: 10px;
+    display: flex;
+    height: 250px;
+    justify-content: center;
+    max-width: 1200px;
     overflow: hidden;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid white;
+    width: 100%;
 }
 
 .image-box img {
-    width: 90%;
+    border-radius: 05px;
     height: 90%;
     object-fit: cover;
-    border-radius: 05px;
+    width: 90%;
 }
 
 /* Estilo inicial das imagens */
 .scroll-image {
-    opacity: 0; /* Inicia invisível */
-    transform: translateY(-100%); /* Começa no topo da página */
-    transition: opacity 1s ease, transform 1s ease; /* Transição suave */
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 /* Quando a classe 'visible' for adicionada */
 .scroll-image.visible {
-    opacity: 1; /* Torna a imagem visível */
-    transform: translateY(0); /* Move a imagem para a posição correta */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 main {
@@ -246,120 +244,117 @@ main {
 /* POR QUE ESCOLHER */
 
 .porque {
-    position: relative;
-    padding: 34px 8px;
-    text-align: left;
-    overflow: hidden;
     background-color: var(--secondary);
     background-image: 
         linear-gradient(#7a49128c, rgba(0, 0, 0, 0.6)), 
         url(images/retro-motor-bike-wheel-vector-illustration-vintage-motorcycle-part.png);
-    background-size: cover;
     background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    padding: 34px 8px;
+    position: relative;
+    text-align: left;
 }
 
 h2 {
-    font-size: var(--24px);
     font-family: var(--fonttitles);
+    font-size: var(--24px);
 }
 
 article {
     background-color: var(--ligth);
+    border-radius: 5px;
     color: var(--dark);
     margin: 1rem auto;
-    border-radius: 5px;
 }
 
 article h3 {
-    font-size: 18px;
-    padding: 1rem 1rem 0 1rem;
-    margin: 8px 0;
     color: var(--primary);
+    font-size: 18px;
+    margin: 8px 0;
+    padding: 1rem 1rem 0 1rem;
 }
 
 article p {
-   padding: 0 1rem 1rem 1rem;
-   margin: 0;
+    margin: 0;
+    padding: 0 1rem 1rem 1rem;
 }
 
 #galeria-title {
-    text-align: left;
-    margin: 36px 8px 16px 8px;
     color: var(--primary);
+    margin: 36px 8px 16px 8px;
+    text-align: left;
 }
 
 .carousel-container {
-    max-width: 1200px;
-    width: calc(100% - 16px);
-    height: 80vh;
-    overflow: hidden;
-    display: flex;
     align-items: center;
+    border-radius: 20px;
+    display: flex;
+    height: 80vh;
     margin: auto;
     margin-bottom: 36px;
+    max-width: 1200px;
+    overflow: hidden;
     position: relative;
-    border-radius: 20px; /* Bordas arredondadas no contêiner */
+    width: calc(100% - 16px);
 }
 
 .carousel {
-    max-width: 1200px;
-    width: 100%;
-    height: 100%;
     align-items: center;
+    border-radius: 20px;
+    height: 100%;
     margin: auto;
+    max-width: 1200px;
     overflow: hidden;
     position: relative;
-    border-radius: 20px; /* Mantém o efeito arredondado */
+    width: 100%;
 }
 
 .carousel-slides {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%; 
     height: 100%;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
 .carousel-slides .slide {
-    position: relative;
-    width: 100%;
     flex-shrink: 0;
     height: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .carousel-slides img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     display: block;
+    height: 100%;
     margin: auto;
+    object-fit: cover;
+    width: 100%;
 }
-
 
 .carousel-slides .caption {
-    border: 1px solid white;
-    position: absolute;
-    bottom: 01%;
-    left: 50%;
-    transform: translate(-50%);
     background-color: #7a4912c5;
-    color: white;
-    padding: 10px;
-    font-size: 1rem;
+    border: 1px solid white;
     border-radius: 15px;
-    z-index: 3; /* Garante que o link da legenda ficará acima dos outros elementos */
+    bottom: 01%;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    position: absolute;
     text-align: center;
+    transform: translate(-50%);
+    left: 50%;
+    z-index: 3;
 }
 
-
 button.prev, button.next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
     z-index: 2;
 }
 
@@ -372,13 +367,12 @@ button.next {
 }
 
 /* SOBRE NÓS */
-
 #sobrenos {
     background-color: white;
     color: var(--dark);
-    text-align: left;
-    padding: 36px 8px 30px 8px;
     font-size: var(--16px);
+    padding: 36px 8px 30px 8px;
+    text-align: left;
 }
 
 #sobrenos h2 {
@@ -393,37 +387,37 @@ button.next {
     display: none;
 }
 
-.texto-desktop {
-    display: none;
-}
-
 .sobre {
+    align-items: center;
     display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    gap: 10px; /* Espaço entre o GIF e o botão */
-    height: 100%; /* Garante que ocupe a altura total do contêiner */
+    gap: 10px;
+    height: 100%;
+    justify-content: center;
 }
 
 .sobre button {
     background-color: var(--primary);
-    color: var(--ligth);
     border-radius: 10px;
+    color: var(--ligth);
     margin: 0 auto;
     padding: 4px 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .sobre button:hover {
+    background-color: var(--secondary);
+    box-shadow: 0 0 10px var(--primary);
     cursor: pointer;
-    transform: scale(1.1); /* Aumenta levemente o botão */
-    box-shadow: 0 0 10px var(--primary); /* Adiciona um brilho */
-    background-color: var(--secondary); /* Troca a cor de fundo para outra (caso tenha uma variável definida) */
+    transform: scale(1.1);
 }
 
 .gif img {
-    width: 50px;
     height: 50px;
+    width: 50px;
+}
+
+.texto-desktop {
+    display: none;
 }
 
 /* CONTATO */
@@ -437,44 +431,44 @@ button.next {
     color: var(--primary);
 }
 
+.wrapper {
+    align-items: center;
+    display: flex;
+    height: 10vh;
+    justify-content: flex-start;
+    width: 100%;
+}
+
 .wrapper .button {
-    display: block;
-    width: 60px;
-    height: 60px;
-    float: left;
-    margin: 0 5px;
     background: #fff;
     border-radius: 50px;
     box-shadow: 05px 10px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
     cursor: pointer;
+    display: block;
+    float: left;
+    height: 60px;
+    margin: 0 5px;
+    overflow: hidden;
     transition: all 0.3s ease-out;
+    width: 60px;
+}
+
+.wrapper .button:hover {
+    width: 200px;
 }
 
 .wrapper .button:hover .icon {
     color: #fff;
 }
 
-.wrapper a.whats:hover .icon {
-    background: #05a354;
-}
-
-.wrapper > a.insta:hover .icon {
-    background-image: linear-gradient(45deg, #5652C4, #ff0000);
-}
-
-.wrapper > a.face:hover .icon {
-    background: #4267b2;
-}
-
 .wrapper .button .icon {
-    display: inline-block;
-    width: 60px;
-    height: 60px;
     border-radius: 50px;
+    display: inline-block;
+    height: 60px;
     line-height: 60px;
     text-align: center;
     transition: all 0.3s ease-out;
+    width: 60px;
 }
 
 .wrapper .button .icon i {
@@ -488,19 +482,27 @@ button.next {
     font-size: 20px;
     font-weight: 500;
     line-height: 60px;
-    margin-left: 10px;    
+    margin-left: 10px;
 }
 
-.wrapper .button:hover {
-    width: 200px;
+.wrapper a.whats:hover .icon {
+    background: #05a354;
 }
 
 .wrapper a.whats:hover span {
     color: #05a354;
 }
 
+.wrapper a.insta:hover .icon {
+    background-image: linear-gradient(45deg, #5652C4, #ff0000);
+}
+
 .wrapper a.insta:hover span {
     color: #ff0000;
+}
+
+.wrapper a.face:hover .icon {
+    background: #4267b2;
 }
 
 .wrapper a.face:hover span {
@@ -511,43 +513,30 @@ button.next {
     color: var(--dark);
 }
 
-.wrapper {
-    width: 100%;
-    height: 10vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    
-}
-
 /* FOOTER */
 footer {
+    align-items: center;
     background-color: var(--secondary);
     color: var(--ligth);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: 100px;
     justify-content: center;
     text-align: center;
-    height: 100px;
-}
-
-footer p {
-    font-size: 14px;
 }
 
 footer a {
-    text-decoration: none;
     color: var(--ligth);
     font-weight: bold;
     position: relative;
+    text-decoration: none;
     transition: color 0.3s ease;
 }
 
 footer a::before {
-    position: absolute;
     left: -20px;
     opacity: 0;
+    position: absolute;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
@@ -558,33 +547,35 @@ footer a:hover {
 
 footer a:hover::before {
     opacity: 1;
-    transform: translateX(5px); /* Move um pouco para o lado */
+    transform: translateX(5px);
 }
 
+footer p {
+    font-size: 14px;
+}
 
 .icon {
-    font-size: 8px;
     color: white;
+    font-size: 8px;
     text-decoration: none;
 }
 
 .whatsapp-button {
-    position: fixed;
-    bottom: 50px;
-    right: 12px;
-    width: 60px;
-    height: 60px;
+    align-items: center;
+    animation: bounce 2s infinite;
     background-color: #25D366;
     border-radius: 50%;
+    bottom: 50px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: center;
-    align-items: center;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    transition: transform 0.3s ease-in-out;
-    text-decoration: none;
-    animation: bounce 2s infinite;
     margin-right: 13px;
+    position: fixed;
+    right: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+    width: 60px;
+    z-index: 1000;
 }
 
 .whatsapp-button:hover {
@@ -592,55 +583,61 @@ footer a:hover::before {
 }
 
 .whatsapp-button img {
-    width: 35px;
     height: 35px;
+    width: 35px;
 }
 
 .whatsapp-text {
-    position: fixed;
     bottom: 10px;
-    right: 10px;
+    color: var(--ligth);
     font-size: 0.8em;
     font-weight: bold;
-    color: var(--ligth);
+    position: fixed;
+    right: 10px;
     text-align: center;
-    z-index: 1000;
     text-shadow:  
         -1px -1px 0px var(--dark),  
          1px -1px 0px var(--dark),  
         -1px  1px 0px var(--dark),  
          1px  1px 0px var(--dark);
+    z-index: 1000;
 }
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-10px);}
-    60% {transform: translateY(-5px);}
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
 }
 
-.arrow-up img{
-    height: 50px;
-    width: 50px;
+.arrow-up img {
     border-radius: 100px;
-    position: fixed;
     bottom: 180px;
+    height: 50px;
+    position: fixed;
     right: 32px;
+    width: 50px;
 }
 
 .arrow-text {
-    position: fixed;
     bottom: 140px;
-    right: 20px;
+    color: var(--ligth);
     font-size: 0.8em;
     font-weight: bold;
-    color: var(--ligth);
+    position: fixed;
+    right: 20px;
     text-align: center;
-    z-index: 1000;
     text-shadow:  
         -1px -1px 0px var(--dark),  
          1px -1px 0px var(--dark),  
         -1px  1px 0px var(--dark),  
          1px  1px 0px var(--dark);
+    z-index: 1000;
 }
 
 @media screen and (min-width: 768px) { 
