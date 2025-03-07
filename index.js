@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // ------------------------- INICIALIZAÇÃO DO AOS -------------------------
+    AOS.init({
+        duration: 1200 // Define a duração padrão de todas as animações
+    });
+
     // ------------------------- FUNÇÃO PARA ATUALIZAR O CSS E EVITAR CACHE -------------------------
     function updateCSSVersion() {
         const link = document.querySelector("link[rel='stylesheet']");
@@ -73,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     startAutoSlide(); // Inicia o slide automático
 
-    // ------------------------- ROLOU SUAVE PARA ANCORAS -------------------------
+    // ------------------------- ROLAGEM SUAVE PARA ÂNCORAS -------------------------
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault(); // Impede que a URL mude
