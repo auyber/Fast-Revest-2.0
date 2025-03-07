@@ -59,6 +59,9 @@ Para a construção do site, foram utilizadas as principais tecnologias de **fro
 ### Animação de Cards
 Utilizando **JavaScript**, implementei uma animação em que as imagens dos cards começam escondidas e só aparecem à medida que o usuário rola a página para baixo. Isso melhora a experiência do usuário, proporcionando um efeito visual dinâmico.
 
+### AOS (Animate On Scroll) para Animações de Entrada
+Implementei a biblioteca **AOS (Animate On Scroll)** para adicionar animações nas seções do site conforme o usuário rola a página. Isso proporcionou um efeito visual interessante e envolvente, melhorando a experiência do usuário e tornando o site mais interativo. O **AOS** foi configurado com um tempo de duração de 1000ms para suavizar as transições e tornar a navegação mais fluida.
+
 ### Navegação Suave e Botão de "Voltar ao Topo"
 A navegação foi projetada para ser simples e intuitiva, com links de menu que levam diretamente às seções do site, usando **scroll suave** para uma transição agradável. Também foi implementado um **botão de "voltar para o topo"**, permitindo que o usuário retorne facilmente à parte superior do site ou ao menu.
 
